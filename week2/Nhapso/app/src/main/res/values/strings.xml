@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Nhapso</string>
+    <string name="ten_ung_dung">Thực hành 022</string>
+    <string name="nhap_so_luong">Nhập vào số lượng</string>
+    <string name="nut_tao">Tạo</string>
+    <string name="loi">Dữ liệu bạn nhập không hợp lệ!!!</string>
+</resources>

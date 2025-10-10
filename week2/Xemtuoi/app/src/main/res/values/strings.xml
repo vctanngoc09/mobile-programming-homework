@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">THỰC HÀNH 01</string>
+    <string name="full_name">Họ và tên</string>
+    <string name="age">Tuổi</string>
+    <string name="enter_button">Kiểm tra</string>
+    <string name="gia">người già</string>
+    <string name="lon">người lớn</string>
+    <string name="tre">trẻ em</string>
+    <string name="be">em bé</string>
+</resources>
