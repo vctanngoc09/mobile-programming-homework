@@ -204,8 +204,13 @@ fun Xemtuoi(){
                         }
                     }
                 } else {
-                    notification = "Vui lòng nhập thông tin hợp lệ"
-                    isError = true
+                    if(checkage.isBlank() || checkname.isBlank()){
+                        notification = "Vui lòng nhập thông tin hợp lệ"
+                        isError = true
+                    }else{
+                        notification = "Tuổi không hợp lệ"
+                        isError = true
+                    }
                 }
             }
         ) {
