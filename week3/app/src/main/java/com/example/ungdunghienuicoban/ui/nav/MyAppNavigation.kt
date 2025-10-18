@@ -7,6 +7,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.ungdunghienuicoban.ui.screen.Columns
 import com.example.ungdunghienuicoban.ui.screen.Components
 import com.example.ungdunghienuicoban.ui.screen.Image
+import com.example.ungdunghienuicoban.ui.screen.LazyColumn
 import com.example.ungdunghienuicoban.ui.screen.Passwordfields
 import com.example.ungdunghienuicoban.ui.screen.Rows
 import com.example.ungdunghienuicoban.ui.screen.Textfield
@@ -19,10 +20,10 @@ fun MyAppNavigation(){
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = Routes.welcome, builder = {
         composable(Routes.welcome,) {
-            Welcome(onNext = { navController.navigate(Routes.components) })
+            Welcome(onNext = { navController.navigate(Routes.lazycolumn) })
         }
-        composable(Routes.components,){
-            Components(navController)
+        composable(Routes.lazycolumn,){ 
+            LazyColumn(navController)
         }
         composable(Routes.textDetail,) {
             Textdetail(onBack = {navController.popBackStack()})

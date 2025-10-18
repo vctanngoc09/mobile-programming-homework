@@ -77,7 +77,7 @@ fun Passwordfields(onBack: () -> Unit) { // ← bỏ dấu phẩy thừa ở đ�
                             )
                             Text(
                                 modifier = Modifier.fillMaxWidth(),
-                                text = "TextField",
+                                text = "PasswordField",
                                 fontSize = 24.sp,
                                 fontWeight = FontWeight.SemiBold,
                                 textAlign = TextAlign.Center,
@@ -170,32 +170,6 @@ fun Passwordfields(onBack: () -> Unit) { // ← bỏ dấu phẩy thừa ở đ�
                         modifier = Modifier.fillMaxWidth()
                     )
 
-                    // 5) Keyboard/IME (Password + Done)
-                    Spacer(Modifier.height(16.dp))
-                    SectionTitle("5) Bàn phím Password + IME Done")
-                    var pwd5 by remember { mutableStateOf("") }
-                    var visible5 by remember { mutableStateOf(false) }
-                    OutlinedTextField(
-                        value = pwd5,
-                        onValueChange = { pwd5 = it },
-                        label = { Text("Mật khẩu") },
-                        singleLine = true,
-                        visualTransformation = if (visible5) VisualTransformation.None else PasswordVisualTransformation(),
-                        trailingIcon = {
-                            IconButton(onClick = { visible5 = !visible5 }) {
-                                Icon(
-                                    imageVector = if (visible5) Icons.Filled.VisibilityOff else Icons.Filled.Visibility,
-                                    contentDescription = null
-                                )
-                            }
-                        },
-                        keyboardOptions = KeyboardOptions(
-                            keyboardType = KeyboardType.Password,
-                            imeAction = ImeAction.Done
-                        ),
-                        keyboardActions = KeyboardActions(onDone = { fm.clearFocus() }),
-                        modifier = Modifier.fillMaxWidth()
-                    )
 
                     // 6) Strength meter (độ mạnh)
                     Spacer(Modifier.height(16.dp))

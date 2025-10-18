@@ -14,4 +14,8 @@ object Routes {
     const val row = "row"
 
     const val passwordfield = "pass"
+
+    const val columnscroll = "columnScroll"
+
+    const val lazycolumn = "lazycolumn"
 }
